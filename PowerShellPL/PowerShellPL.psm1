@@ -32,7 +32,7 @@
     }
 
     try {
-        $wyniki = Invoke-RestMethod -Uri "https://powershellpl.net/feed/?paged=$Page"
+        $wyniki = Invoke-RestMethod -Uri "https://powershellpl.net/feed/?paged=$Page" -ErrorAction Stop
         $wyniki | Add-Member @doWyświetlenia
     } catch {
         Write-Error "Coś poszło nie tak... $_"
