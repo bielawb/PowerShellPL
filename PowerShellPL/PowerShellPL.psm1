@@ -32,6 +32,7 @@
     }
 
     try {
+        Write-Verbose -Message "Pobieramy informacje o blogu PowerShell PL"
         $wyniki = Invoke-RestMethod -Uri "https://powershellpl.net/feed/?paged=$Page"
         $wyniki | Add-Member @doWyświetlenia
     } catch {
